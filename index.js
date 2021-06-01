@@ -1,3 +1,4 @@
+import Cors from 'cors';
 import express from 'express';
 
 import userRouter from './UserRouter.js';
@@ -5,6 +6,7 @@ import userRouter from './UserRouter.js';
 const PORT = process.env.PORT || 3000;
 const app = express();
 
+app.use(Cors());
 app.use(express.json());
 app.use('/api', userRouter);
 
