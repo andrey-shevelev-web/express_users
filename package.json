@@ -1,0 +1,19 @@
+{
+    "name": "express_users",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "serve": "nodemon index.js"
+    },
+    "keywords": [],
+    "author": "Andrey Shevelev <andrey.shevelev.web@gmail.com>",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.7"
+    }
+}
