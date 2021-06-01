@@ -5,7 +5,8 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "serve": "nodemon index.js"
+        "serve": "nodemon index.js",
+        "start": "node index.js"
     },
     "keywords": [],
     "author": "Andrey Shevelev <andrey.shevelev.web@gmail.com>",
