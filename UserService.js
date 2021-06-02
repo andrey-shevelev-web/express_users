@@ -11,15 +11,19 @@ class UserService {
     }
 
     getPage(start, limit, page) {
-        const start = +start;
-        const limit = +limit;
-        const page = +page;
+        const iStart = +start;
+        const iLimit = +limit;
+        const iPage = +page;
 
-        if ((page - 1) * limit !== start) {
+        console.log('iStart', iStart, typeof iStart);
+        console.log('iLimit', iLimit, typeof iLimit);
+        console.log('iPage', iPage, typeof iPage);
+
+        if ((iPage - 1) * iLimit !== iStart) {
             return [];
         }
-        const iEnd = start + limit;
-        return this.items.slice(start, iEnd);
+        const iEnd = iStart + iLimit;
+        return this.items.slice(iStart, iEnd);
     }
 }
 
