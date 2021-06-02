@@ -14,7 +14,8 @@ class UserController {
 
     getPage(req, res) {
         try {
-            const items = UserService.getPage(req.body.start, req.body.limit);
+            const { start, limit, page } = req.body;
+            const items = UserService.getPage(start, limit, page);
             const total = UserService.total;
 
             return res.json({ items, total });

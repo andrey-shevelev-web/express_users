@@ -10,10 +10,12 @@ class UserService {
         return this.items;
     }
 
-    getPage(start, limit) {
-        const indexStart = start * limit;
-        const indexEnd = indexStart + limit;
-        return this.items.slice(indexStart, indexEnd);
+    getPage(start, limit, page) {
+        if ((page - 1) * limit !== start) {
+            return [];
+        }
+        const iEnd = start + limit;
+        return this.items.slice(start, iEnd);
     }
 }
 
