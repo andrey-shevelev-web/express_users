@@ -11,6 +11,10 @@ class UserService {
     }
 
     getPage(start, limit, page) {
+        const start = +start;
+        const limit = +limit;
+        const page = +page;
+
         if ((page - 1) * limit !== start) {
             return [];
         }
